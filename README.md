@@ -22,7 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-##userテーブル
+
+## userテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -30,7 +31,7 @@ Things you may want to cover:
 |email|string|null: false, add_index :users, email, unique: true|
 |passwaord|integer|null: false|
 
-###Association
+### Association
 - has_many :messages
 - has_many :groups, through: :members
 
@@ -71,7 +72,7 @@ Things you may want to cover:
 |------|----|-------|
 |name|string|null: false|
 
-###Association
+### Association
 - has_many :users, through: :members
 - has_many :messages
 
