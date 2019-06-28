@@ -1,0 +1,46 @@
+.falash-box グループ作ったよーん
+.wrapper
+ .chat-side
+  .side-header
+   .side-header__box
+    .side-header__box__user-name NAOMI
+    .side-header__box__menu
+     .side-header__box__menu__new__group
+      -# %a{ :href => }
+      -#  .i {fas fa-edit}
+       ::before
+      .side-header__box__menu__edit__user
+      -#  %a{ :href => }
+      -#  .i fas fa-cog
+  .groups
+   .group
+    %p.group__group-name ハムハムTEAM
+    %p.group__group-latest-message ハムハムっ
+ .chat-main
+  .main-header 
+   .main-header__left-box
+    .main-header__left-box__current-group ハムハムTEAM
+    %ul.mail-header__left-box__member-list 
+     Member: 
+     %li.main-header__left-box__member-list__member 
+      NAOMI
+    -# %a{ :href => }
+   .main-header__edit-btn Edit
+  .messages
+   .message
+    .message__upper-info
+     %p.message__upper-info__talker NAOMI
+     %p.message__upper-info__date 2019/06
+     .message__text ハムハムっ 
+  .form
+   %form.new_message
+  -#  %input{name: utf8, type: hidden, value: send}
+  -#  %input{type: hidden, name: authenticity_taken, value: send}
+  -#   .input-box 
+  -#    %input{placeholder: type_a_message, class: input-box__text, type: text, name: message, id: message1}
+  -#    %label{class: input-box__image, for: message_image}
+  -#     %i{class: fa_fa-image}
+  -#     -#  ::before
+  -#      %input{class: input-box__image__file, type: file, name: message[image], id: message_image}
+  -#    %input{type: submit, name: commit, value: send, class: submit-btn, data_disable_with: Send}
+
