@@ -1,4 +1,4 @@
-.falash-box グループ作ったよーん
+.flash-box グループ作ったよーん
 .wrapper
  .chat-side
   .side-header
@@ -6,11 +6,11 @@
     %p.side-header__box__user-name NAOMI
     %ul.side-header__box__menu
      %li.side-header__box__menu__new-group
-      -# %a{:href /groups/new}
-      %i.fa.fa-edit
+      =link_to "http://localhost:3000/" do
+       %i.fa.fa-edit
      %li.side-header__box__menu__edit__user
-      -# %a{ :href /users/user_id/edit }
-      %i.fa.fa-cog
+      =link_to "http://localhost:3000/" do
+       %i.fa.fa-cog
   .groups
    .group
     %p.group__group-name ハムハムTEAM
@@ -19,12 +19,12 @@
   .main-header 
    .main-header__left-box
     .main-header__left-box__current-group ハムハムTEAM
-    %ul.mail-header__left-box__member-list 
-     Member: 
+    %ul.main-header__left-box__member-list 
+     Member：
      %li.main-header__left-box__member-list__member 
       NAOMI
-    -# %a{ :href => }
-   .main-header__edit-btn Edit
+   =link_to "http://localhost:3000/"
+    .main-header__edit-btn Edit
   .messages
    .message
     .message__upper-info

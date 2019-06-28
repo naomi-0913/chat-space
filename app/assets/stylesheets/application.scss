@@ -21,6 +21,11 @@
  padding: 0;
 }
 
+.flash-box{
+background-color: #38aef0;
+text-align: center;
+color: #ffffff;
+}
 .wrapper{
 }
 
@@ -52,10 +57,16 @@
       margin: 0 20px;
       padding: 0;
       &__new-group{
-        margin-left: 0.3rem;}
+        margin-left: 0.3rem;
+        .fa.fa-edit{
+        color: #ffffff;}
+      }
       &__edit__user{
         margin-left: 0.3rem;
-        float: left;}
+        float: left;
+        .fa.fa-cog{
+        color: #ffffff;}
+      }
     } 
    }
  }
@@ -78,8 +89,8 @@
       color: #ffffff;
      }
     }
-   }
   }
+}
 
 .chat-main{
  width: calc(100vw - 300px);
@@ -88,30 +99,29 @@
  padding: 0;
 
   .main-header{
-   height: 100px;
-   padding: 0 40px;
-   display: flex;
-   border: #eeeeee;
-   &__left-box{
-     margin-top: 35px;
-    }
-    &__left-box__current-group{
+  height: 100px;
+  padding: 0 40px;
+  display: flex;
+  border-bottom: solid 1px #eeeeee;
+  &__left-box{
+    margin-top: 35px;
+    &__current-group{
      font-size: 20px;
      color: #333333;
-     padding-bottom: 15px;
-    }
-    &__left-box__member-list{
-     display: inline-block;
+     padding-bottom: 15px;}
+    &__member-list{
+     display: flex;
+     list-style: none;
      font-size: 12px;
      color: #999999;
-    }
-    &__left-box__member-list__member{
-     display: inline-block;
-     font-size: 12px;
-     color: #999999; 
-     list-style: none;
+     margin-bottom: 10px;
+     &__member{
+       display: inline-block;
+       font-size: 12px;
+       color: #999999;}
     }
   }
+ }
 
   .main-header__edit-btn{
    display: inline-block;
