@@ -36,46 +36,50 @@
    display: flex;
    align-items: center;
    padding: 0 20px;
-    
    &__box{
-     font-size: 16px;
-     color: #ffffff;
-     font-weight: bold;
-    }
-
-   &__box__user-name{
-   font-size: 16px;
-   color: #ffffff;
+    font-size: 16px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: #ffffff;
+    font-weight: bold;
+    &__user-name{
+      font-size: 16px;
+      color: #ffffff;}
+    &__menu{
+      display: flex;
+      list-style: none;
+      margin: 0 20px;
+      padding: 0;
+      &__new-group{
+        margin-left: 0.3rem;}
+      &__edit__user{
+        margin-left: 0.3rem;
+        float: left;}
+    } 
    }
+ }
 
-    &__box_menu{
-     display: flex;
-    }
-  }
-
- .groups{
+  .groups{
    background-color: #2f3e51;
    height: calc(100vh - 100px);
    padding: 20px 20px  0;
-
-   .group{
-    margin-bottom: 40px;
-
-    &__group-name{
-     font-size: 15px;
-     font-weight: bold;
-     color: #ffffff;
-     margin-bottom: 5px;
-    }
-
-    &__group-latest-message{
-     font-size: 11px;
-     font-weight: bold;
-     color: #ffffff;
+    .group{
+     margin-bottom: 40px;
+     &__group-name{
+      font-size: 15px;
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 5px;
+     }
+     &__group-latest-message{
+      font-size: 11px;
+      font-weight: bold;
+      color: #ffffff;
+     }
     }
    }
   }
-}
 
 .chat-main{
  width: calc(100vw - 300px);
@@ -88,8 +92,7 @@
    padding: 0 40px;
    display: flex;
    border: #eeeeee;
-  
-    &__left-box{
+   &__left-box{
      margin-top: 35px;
     }
     &__left-box__current-group{
@@ -166,7 +169,4 @@
     background-color: white;
    }
   }
-
- }
-
-
+}

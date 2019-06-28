@@ -3,15 +3,14 @@
  .chat-side
   .side-header
    .side-header__box
-    .side-header__box__user-name NAOMI
-    .side-header__box__menu
-     .side-header__box__menu__new__group
-      -# %a{ :href => }
-      -#  .i {fas fa-edit}
-       ::before
-      .side-header__box__menu__edit__user
-      -#  %a{ :href => }
-      -#  .i fas fa-cog
+    %p.side-header__box__user-name NAOMI
+    %ul.side-header__box__menu
+     %li.side-header__box__menu__new-group
+      -# %a{:href /groups/new}
+      %i.fa.fa-edit
+     %li.side-header__box__menu__edit__user
+      -# %a{ :href /users/user_id/edit }
+      %i.fa.fa-cog
   .groups
    .group
     %p.group__group-name ハムハムTEAM
