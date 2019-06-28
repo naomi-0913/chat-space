@@ -23,7 +23,7 @@
      Member：
      %li.main-header__left-box__member-list__member 
       NAOMI
-   =link_to "http://localhost:3000/"
+   =link_to "http://localhost:3000/" do
     .main-header__edit-btn Edit
   .messages
    .message
@@ -32,14 +32,13 @@
      %p.message__upper-info__date 2019/06
      .message__text ハムハムっ 
   .form
-   %form.new_message
-  -#  %input{name: utf8, type: hidden, value: send}
-  -#  %input{type: hidden, name: authenticity_taken, value: send}
-  -#   .input-box 
-  -#    %input{placeholder: type_a_message, class: input-box__text, type: text, name: message, id: message1}
-  -#    %label{class: input-box__image, for: message_image}
-  -#     %i{class: fa_fa-image}
-  -#     -#  ::before
-  -#      %input{class: input-box__image__file, type: file, name: message[image], id: message_image}
-  -#    %input{type: submit, name: commit, value: send, class: submit-btn, data_disable_with: Send}
+   = form_for "", html: {class: "new_message"} do |f| 
+    .input-box
+     = f.text_field :text, placeholder: "type_a_message", class: "input-box__text"
+     %label(class="input-box__image" for="image_file")
+      %i.fa.fa-image
+       = f.file_field :image, id: "image_file", class: "input-box__image"
+    = f.submit "Send", class: "submit-btn"
+
+
 
