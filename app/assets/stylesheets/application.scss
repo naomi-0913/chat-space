@@ -13,7 +13,7 @@
 }
 
 *{
- box-sizing: border-box;
+box-sizing: border-box;
 }
 
 .body{
@@ -145,25 +145,22 @@ color: #ffffff;
     padding-bottom: 10px;
     
     .message__upper-info{
-     
+     margin-bottom: 10px;
+     display: flex;
      &__talker{
-       display: inline-block;
        font-size: 16px;
        font-weight: bold;
-       color: #434a54;
-      }
+       color: #434a54;}
      &__date{
-       display: inline-block;
        font-size: 12px;
        margin-left: 10px;
-       color: #999999;
-      }
-     &__text{
-       font-size: 14px;
-       color: #434a54;
-      }
-     } 
+       color: #999999;}
     }
+    &__text{
+     font-size: 14px;
+     color: #434a54;}
+     margin-bottom: 10px;
+    } 
   }
 
   .form{
@@ -171,13 +168,38 @@ color: #ffffff;
    background-color: #ddd;
    padding: 20px 40px;
    margin: 0;
-
    .new_message{
-    display: flex;
-    height: 50px;
-    margin: 0 50px;
-    background-color: white;
-   }
-
+     display: flex;
+     height: 50px;
+     background-color:#ddd;
+     .input-box{
+      position: relative;
+      width: 100%;
+      &__text{
+        height: 50px;
+        width: 100%;
+        padding: 0 35px 0 10px;
+        font-size: 16px;
+        color: #434a54;}
+      &__image{
+        position: absolute;
+        right: 35px;
+        top:10px;
+        bottom: 10px;
+        .fa.fa-image{
+          display: inline-block;
+          .input-box__image{
+            display: none;}
+         }
+       }
+      }
+     .submit-btn{
+      background-color: #38aef0;
+      height: 50px;
+      width: 100px;
+      color: #ffffff;
+      margin-left: 15px;
+      }
+  }
   }
 }
