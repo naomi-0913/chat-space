@@ -1,0 +1,21 @@
+@import "./reset";
+@import "font-awesome";
+@import "variable";
+@import "chat-side";
+@import "chat-main";
+
+*{
+ box-sizing: border-box;
+}
+
+.html{
+ background-color: #ffffff;
+ height: auto;
+}
+.head{
+ display: none;
+}
+.body{
+ margin: 0;
+ padding: 0;
+}
