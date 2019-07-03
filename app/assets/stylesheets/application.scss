@@ -5,20 +5,26 @@
 @import "chat-main";
 @import "user";
 @import "flash";
+@import "group";
 
 
 *{
- box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .html{
- background-color: #ffffff;
- height: auto;
+  background-color: #ffffff;
+  height: auto;
 }
 .head{
- display: none;
+  display: none;
 }
 .body{
- margin: 0;
- padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+:any-link{
+  text-decoration: none;
+  color: none;
 }
