@@ -7,7 +7,7 @@
         %ul.main-header__left-box__member-list 
           Member：
           %li.main-header__left-box__member-list__member NAOMI
-      =link_to edit_group_path(group) do
+      =link_to edit_group_path(@group) do
         .main-header__edit-btn Edit
     .messages
       .message
@@ -16,7 +16,7 @@
           %p.message__upper-info__date 2019/06
         %p.message__text ハムハムっ 
     .form
-      = form_for "", html: {class: "new_message"} do |f| 
+      = form_for [@group, @message], html: {class: "new_message"} do |f| 
         .input-box
           = f.text_field :content, placeholder: "type a message", class: "input-box__text"
           %label(class="input-box__image" for="image_file")
