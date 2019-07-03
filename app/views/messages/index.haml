@@ -3,22 +3,21 @@
   .chat-main
     .main-header 
       .main-header__left-box
-        .main-header__left-box__current-group ハムハムTEAM
+        %h2.main-header__left-box__current-group 
+          = @group.name
         %ul.main-header__left-box__member-list 
           Member：
-          %li.main-header__left-box__member-list__member NAOMI
-      =link_to edit_group_path(group) do
+          %li.main-header__left-box__member-list__member
+            - @group.users.each do |user|
+              = user.name
+      =link_to edit_group_path(@group) do
         .main-header__edit-btn Edit
     .messages
-      .message
-        .message__upper-info
-          %p.message__upper-info__talker NAOMI
-          %p.message__upper-info__date 2019/06
-        %p.message__text ハムハムっ 
+      = render @messages
     .form
-      = form_for "", html: {class: "new_message"} do |f| 
+      = form_for [@group, @message] do |f| 
         .input-box
-          = f.text_field :text, placeholder: "type a message", class: "input-box__text"
+          = f.text_field :content, placeholder: "type a message", class: "input-box__text"
           %label(class="input-box__image" for="image_file")
             %i.fa.fa-image
               = f.file_field :image, id: "image_file", class: "input-box__image"
