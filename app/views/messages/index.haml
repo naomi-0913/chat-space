@@ -18,7 +18,7 @@
     .form
       = form_for "", html: {class: "new_message"} do |f| 
         .input-box
-          = f.text_field :text, placeholder: "type a message", class: "input-box__text"
+          = f.text_field :content, placeholder: "type a message", class: "input-box__text"
           %label(class="input-box__image" for="image_file")
             %i.fa.fa-image
               = f.file_field :image, id: "image_file", class: "input-box__image"
