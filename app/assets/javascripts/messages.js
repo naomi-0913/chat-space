@@ -1,5 +1,20 @@
 $(function(){
   function buildMessage(message){
+    console.log(message)
+
+    if (message.content == null ){
+      var message__text = ''
+      }else{
+      var message__text = `<p class>${message.content}</p>`
+      }
+
+    if (message.image.url == null){
+      var message__image = ''
+      }else{
+      var message__image = `<img src="${message.image.url}
+      "></div>`
+      }
+
     var html = `<div class="message">
                   <div class="message__upper-info">
                     <p class="message__upper-info__talker">
@@ -10,10 +25,8 @@ $(function(){
                     </p>
                   </div>
                   <div class="lower-message">
-                    <p class="message__text">
-                    ${message.content}
-                    </p>
-                    <img class="lower-message__image" ${message.image.url}>
+                  ${message__text}
+                  ${message__image}
                   </div>
                 </div>`
     return html;
@@ -34,8 +47,8 @@ $(function(){
     .done(function(message){
       var html = buildMessage(message);
       $('.messages').append(html);
+      $('.new_message')[0].reset();
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
-      $('.input-box__text').val('');
     })
     .fail(function(){
     alert('エラー');
