@@ -3,22 +3,23 @@ $(function(){
 
     var message__image = (message.image.url) ?  `<img src="${message.image.url}">` : ''
 
-    var html = `<div class="message">
-                  <div class="message__upper-info">
-                    <p class="message__upper-info__talker">
-                    ${message.user.name}
-                    </p>
-                    <p class="message__upper-info__date">
-                    ${message.created_at}
-                    </p>
-                  </div>
-                  <div class="lower-message">
-                  <p class = message__text>
-                  ${message.content}
-                  </p>
-                ${message__image}
-                  </div>
-                </div>`
+    var html =
+      `<div class="message">
+        <div class="message__upper-info">
+          <p class="message__upper-info__talker">
+            ${message.user.name}
+          </p>
+          <p class="message__upper-info__date">
+            ${message.created_at}
+          </p>
+        </div>
+        <div class="lower-message">
+          <p class = message__text>
+            ${message.content}
+          </p>
+          ${message__image}
+        </div>
+      </div>`
     return html;
   }
 
@@ -41,7 +42,7 @@ $(function(){
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
     })
     .fail(function(){
-    alert('エラー');
+      alert('エラー');
     })
     .always(function(){
       $('.submit-btn').removeAttr('disabled');
