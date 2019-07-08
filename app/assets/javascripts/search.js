@@ -1,4 +1,4 @@
-$(function(){
+$(document).on('turbolinks:load', function(){
 
   var search_list = $("#user-search-result");
   var member_list = $("#chat-group-users");
@@ -29,7 +29,7 @@ $(function(){
 
 
   $(".chat-group-form__input").on("keyup", function(){
-    var input = $("#user-search-field.chat-group-form__input").val();
+    var input = $("#user-search-field").val();
     $.ajax({
       type: 'GET',
       url: '/users/search',
