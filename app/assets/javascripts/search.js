@@ -27,7 +27,7 @@ $(document).on('turbolinks:load', function(){
     member_list.append(html);
   }
 
-  $(".chat-group-form__input").on("keyup", function(){
+  $("#user-search-field").on("keyup", function(){
     var input = $("#user-search-field").val();
     $.ajax({
       type: 'GET',
